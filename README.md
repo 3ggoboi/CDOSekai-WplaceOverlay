@@ -10,4 +10,10 @@
 - The program for some reason just refuses to work on the Brave Browser
   - So any of the following browsers work based on my experience: **Firefox**, **Chrome**,
 
+- If you encounter any errors when running ```main.py```, just run the following commands on your cmd terminal
+```
+py -m pip install Pillow
+
+py -m pip install curl_cffi
+```
 ### Enjoy! 
