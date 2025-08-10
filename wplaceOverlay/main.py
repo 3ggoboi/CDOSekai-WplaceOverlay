@@ -47,7 +47,7 @@ def updateImage():
 
         for x in range(width):
             for y in range(height):
-                if blueprintpix[x, y] != (0,0,0,0) and blueprintpix[x,y] != basepix[x,y]:
+                if blueprintpix[x, y][3] != 0 and blueprintpix[x,y] != basepix[x,y]:
                     missing_pix += 1
                     bppix = blueprintpix[x,y]
                     identical = False
@@ -79,4 +79,5 @@ with socketserver.TCPServer(("", PORT), CORSHandler) as httpd:
         updateImage()
         httpd.timeout = 60
         httpd.handle_request()
+
 
